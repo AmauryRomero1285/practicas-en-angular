@@ -1,0 +1,35 @@
+@keyframes changeColor {
+  0% {
+    border:3px solid red;
+  }
+  14% {
+    border:3px solid orange;
+  }
+  28% {
+    border:3px solid yellow;
+  }
+  42% {
+    border:3px solid green;
+  }
+  57% {
+    border:3px solid blue;
+  }
+  71% {
+    border:3px solid indigo;
+  }
+  85% {
+    border:3px solid violet;
+  }
+  100% {
+    border:3px solid red;
+  }
+}
+
+.editable-content {
+    margin-top: 50px;
+    animation:changeColor 12s infinite;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  

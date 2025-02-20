@@ -1,0 +1,62 @@
+/* Estilo del título principal */
+.title {
+    width: 100%;
+    border-radius: 15px;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #111439;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor principal del manual */
+.manual {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tarjeta individual */
+.card {
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ddd;
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de las tarjetas */
+.card h2 {
+    color: #8783D1; /* Violeta */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

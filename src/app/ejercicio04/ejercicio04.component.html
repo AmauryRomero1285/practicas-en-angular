@@ -1,0 +1,11 @@
+<p *ngIf="!isServerRunning">El servidor no está corriendo</p>
+<p *ngIf="isServerRunning">El servidor está en línea</p>
+
+<p *ngIf="isServerRunning">
+  <span *ngIf="isLoggedIn">
+    <h2>Bienvenido de vuelta</h2>
+  </span>
+  <span *ngIf="!isLoggedIn">
+    <h2>Por favor inicia sesión</h2>
+  </span>
+</p>

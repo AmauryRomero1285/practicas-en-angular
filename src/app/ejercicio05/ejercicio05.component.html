@@ -1,0 +1,13 @@
+<ul *ngIf="showList">
+    <li *ngFor="let os of operatingSystems">
+      {{ os.name }}
+    </li>
+  </ul>
+  
+  <ul *ngIf="!showList">
+    <li *ngFor="let user of users">
+      {{ user.name }}
+    </li>
+  </ul>
+  
+  
