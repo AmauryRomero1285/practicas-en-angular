@@ -7,6 +7,8 @@ import { Ejercicio03Component } from './ejercicio03/ejercicio03.component';
 import { Ejercicio04Component } from './ejercicio04/ejercicio04.component';
 import { Ejercicio05Component } from './ejercicio05/ejercicio05.component';
 import { Ejercicio06Component } from './ejercicio06/ejercicio06.component';
+import { MatButtonModule } from '@angular/material/button';
+import { ToolbarComponent } from './commponents/toolbar/toolbar.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,9 @@ import { Ejercicio06Component } from './ejercicio06/ejercicio06.component';
     Ejercicio03Component,
     Ejercicio04Component,
     Ejercicio05Component,
-    Ejercicio06Component
+    Ejercicio06Component,
+    MatButtonModule,
+    ToolbarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -20,5 +20,5 @@ export class Ejercicio05Component {
     { id: 3, name: 'Jonathan' },
     { id: 4, name: 'Brian' }
   ];
-  showList = false; 
+  showList = true; 
 }
