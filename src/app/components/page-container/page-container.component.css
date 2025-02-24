@@ -2,6 +2,7 @@
 .page-container {
   display: flex;
   height: 100%;
+  background-color: #AEDCC0;
 }
 
 /* Sidebar */
