@@ -1,0 +1,14 @@
+<div class="page-container">
+  <!-- Sidebar -->
+  <app-sidebar class="sidebar" [class.-translate-x-full]="!isSidebarVisible"></app-sidebar>
+  
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <app-content></app-content>
+  </div>
+  
+  <!-- Botón para mostrar/ocultar Sidebar -->
+  <button (click)="toggleSidebar()" class="toggle-button">
+    Inicio
+  </button>
+</div>

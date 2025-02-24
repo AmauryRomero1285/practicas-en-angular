@@ -1,12 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import{provideAnimations} from '@angular/platform-browser/animations';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { appConfig } from './app/app.config';
 
-bootstrapApplication(AppComponent,{
-    providers:[
-      provideAnimations(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(),//reemplazar por browseranimationsmodule
-    ]
-})
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err => console.error(err));
