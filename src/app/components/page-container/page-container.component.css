@@ -9,6 +9,7 @@
   display: flex;
   flex: 1;
   width: 100vw;
+  
 }
 app-toolbar {
   position: relative;
@@ -32,6 +33,7 @@ app-toolbar {
   padding: 1rem;
   background-color: #f3f4f6; 
   transition: width 0.3s ease-in-out;
+  padding-top: 9vh;
 }
 
 /* Cuando el sidebar está oculto, el contenido ocupa el 100% */
@@ -45,7 +47,7 @@ app-toolbar {
   top: 10px;
   left: 15px;
   z-index: 1000;
-  background-color: #1f2937; 
+  background-color: #1f293723; 
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -54,7 +56,7 @@ app-toolbar {
   transition: left 0.3s ease-in-out;
 
   &:hover {
-    background-color: #374151; 
+    background-color: #3741514b; 
   }
 }
 
@@ -63,22 +65,22 @@ app-toolbar {
   left: 260px;
 }
 /* Breadcrumb ajustable según el estado del Sidebar */
-/* Breadcrumb ajustable según el estado del Sidebar */
 app-breadcrumb {
-  background-color: #ffffff00; /* Fondo transparente */
+  background-color: #f6f7f9; /* Fondo transparente */
   color: #000;
   text-align: center;
   padding: 0.75rem;
   position: fixed;
-  top: 4.4rem; 
+  top: 5vh; /* Espacio debajo del navbar y botón de alternar */
   width: 100vw;
-  transition: all 0.3s ease-in-out;
   box-sizing: border-box;
   z-index: 1;
 }
 
 /* Cuando el sidebar está activo (visible), el breadcrumb ocupa el 75% del ancho */
 .breadcrumb-sidebar-visible {
-  margin-left: 25vw; 
-  width: 75vw; 
+  margin-left: 25vw;
+  width: 75vw;
+  top: 5vh;
 }
+
