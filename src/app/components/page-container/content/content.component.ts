@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
   selector: 'app-content',
   imports: [RouterModule],
   templateUrl: './content.component.html',
-  styleUrl: './content.component.css'
+  styleUrl: './content.component.css',
 })
-export class ContentComponent {
-
-}
+export class ContentComponent {}

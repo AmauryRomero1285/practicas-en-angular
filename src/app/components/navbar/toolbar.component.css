@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-between; 
     align-items: center; 
+    width: 100vw;
+    height: 6vh;
   }
   
   /* Contenedor de íconos del usuario */

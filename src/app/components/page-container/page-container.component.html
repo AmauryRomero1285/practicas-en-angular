@@ -1,14 +1,28 @@
-<div class="page-container">
-  <!-- Sidebar -->
-  <app-sidebar class="sidebar" [class.-translate-x-full]="!isSidebarVisible"></app-sidebar>
-  
-  <!-- Contenido principal -->
-  <div class="main-content">
-    <app-content></app-content>
-  </div>
-  
-  <!-- Botón para mostrar/ocultar Sidebar -->
-  <button (click)="toggleSidebar()" class="toggle-button">
-    Inicio
+<div class="container">
+  <!-- Navbar -->
+  <app-toolbar></app-toolbar>
+
+  <!-- Botón para alternar Sidebar -->
+  <button class="toggle-sidebar-btn" (click)="toggleSidebar()">
+    {{ isSidebarVisible ? 'Menu' : 'Menu' }}
   </button>
+
+  <!-- Breadcrumb ajustable -->
+  <app-breadcrumb [class.breadcrumb-sidebar-visible]="isSidebarVisible"></app-breadcrumb>
+
+  <!-- Contenedor principal -->
+  <div class="main-content">
+    <!-- Sidebar (25% del ancho) -->
+    <div class="sidebar" [class.hidden]="!isSidebarVisible">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <!-- Contenido dinámico -->
+    <div class="content" [class.expanded]="!isSidebarVisible">
+      <app-content></app-content>
+    </div>
+  </div>
+
+  <!-- Footer dinámico -->
+  <app-footer [isSidebarVisible]="isSidebarVisible"></app-footer>
 </div>

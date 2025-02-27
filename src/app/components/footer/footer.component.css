@@ -1,0 +1,16 @@
+.footer {
+    background-color: #ffffff00; 
+    color: #000;
+    text-align: center;
+    padding: 0.75rem; 
+    position: fixed;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    width: 100vw;
+  
+    &.footer-sidebar-active {
+      margin-left: 25vw;
+      width: 75vw; 
+    }
+  }
+  

@@ -2,8 +2,8 @@
 .sidebar {
     background-color: #343E3D; 
     color: white;
-    height: 100%; 
-    width: 16rem; 
+    height: 94vh; 
+    width: 25vw; 
     padding: 1rem;
   }
   
@@ -32,7 +32,6 @@
   .sidebar-item:hover {
     background-color: #1d222196;
     border-radius: 15px;
-    transform: scale(1.1);
     text-align: center;
   }
   
