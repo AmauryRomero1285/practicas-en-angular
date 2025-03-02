@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,5 +10,11 @@ export class ToolbarComponent {
   isSidebarVisible = true;
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
+  }
+
+  @Output() logoutEvent=new EventEmitter<void>();
+
+  logout(){
+    this.logoutEvent.emit();
   }
 }

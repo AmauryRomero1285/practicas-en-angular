@@ -37,7 +37,7 @@
   .user-avatar {
     width: 2rem; 
     height: 2rem; 
-    border-radius: 50%; 
+    border-radius:20px; 
   }
   
   /* Menú desplegable */
