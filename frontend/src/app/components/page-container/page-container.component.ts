@@ -28,11 +28,11 @@ export class PageContainerComponent {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
 
-  logout() {
-    this.isLoggedIn = false;
-  }
+  // logout() {
+  //   this.isLoggedIn = false;
+  // }
 
-  login() {
-    this.isLoggedIn = true;
-  }
+  // login() {
+  //   this.isLoggedIn = true;
+  // }
 }
