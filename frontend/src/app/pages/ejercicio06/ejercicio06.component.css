@@ -27,6 +27,7 @@
 
 .editable-content {
     margin-top: 50px;
+    background-color: #f3f3f3;
     animation:changeColor 12s infinite;
     padding: 5px;
     border-radius: 5px;

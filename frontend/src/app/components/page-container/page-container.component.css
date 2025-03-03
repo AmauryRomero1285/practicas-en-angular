@@ -31,7 +31,7 @@ app-toolbar {
 .content {
   width: 100vw; 
   padding: 1rem;
-  background-color: #f3f4f6; 
+  background-color: #D0CEBA; 
   transition: width 0.3s ease-in-out;
   padding-top: 9vh;
 }

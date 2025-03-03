@@ -1,4 +1,4 @@
-<div class="container" *ngIf="!isLoggedIn">
+<div class="container" *ngIf="isLoggedIn">
   <!-- Navbar -->
   <app-toolbar></app-toolbar>
 
@@ -27,9 +27,9 @@
   <app-footer [isSidebarVisible]="isSidebarVisible"></app-footer>
 </div>
 
-<div *ngIf="isLoggedIn">
-  <div class="content" >
-    <app-forms (loginEvent)="login()"></app-forms>
+<div *ngIf="!isLoggedIn">
+  <div class="content" style="height: 100vh;">
+    <app-forms (click)="login()"></app-forms>
   </div>
   <app-footer [isSidebarVisible]="!isSidebarVisible"></app-footer>
 </div>

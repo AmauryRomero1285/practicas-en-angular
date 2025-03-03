@@ -27,7 +27,10 @@ const hashPassword = (password) => {
 };
 //generate session Id
 const generateSessionId = () => {
-  return Math.floor(100000 + Math.random() * 100000) + Date.now().toString().slice(-5);
+  return (
+    Math.floor(100000 + Math.random() * 100000) +
+    Date.now().toString().slice(-5)
+  );
 };
 //check if session Id exists
 const generateSessionUniqueId = async () => {
@@ -41,8 +44,8 @@ const generateSessionUniqueId = async () => {
   return newId;
 };
 
-export { 
-  generateUniqueId,
-  hashPassword,
-  generateSessionUniqueId
+export {
+   generateUniqueId,
+   hashPassword, 
+   generateSessionUniqueId,
 };

@@ -13,6 +13,7 @@ const userSchema = new Schema(
     },
     role: {
       type: String,
+      enum: ["user", "admin"],
       default: "user",
     },
     createdAt: {
@@ -26,4 +27,4 @@ const userSchema = new Schema(
   }
 );
 
-export default model('User',userSchema);
+export default model("User", userSchema);

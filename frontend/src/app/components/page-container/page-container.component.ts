@@ -5,26 +5,34 @@ import { FooterComponent } from '../footer/footer.component';
 import { ToolbarComponent } from '../navbar/toolbar.component';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 import { FormsComponent } from '../forms/forms.component';
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-page-container',
-  imports: [SidebarComponent, ContentComponent, FooterComponent,ToolbarComponent,BreadcrumbComponent,FormsComponent,CommonModule],
+  imports: [
+    SidebarComponent,
+    ContentComponent,
+    FooterComponent,
+    ToolbarComponent,
+    BreadcrumbComponent,
+    FormsComponent,
+    CommonModule,
+  ],
   templateUrl: './page-container.component.html',
   styleUrl: './page-container.component.css',
 })
 export class PageContainerComponent {
   isSidebarVisible = true;
-  isLoggedIn=true;
+  isLoggedIn = false;
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
 
-  logout(){
-    this.isLoggedIn=false;
+  logout() {
+    this.isLoggedIn = false;
   }
 
-  login(){
-    this.isLoggedIn=true;
+  login() {
+    this.isLoggedIn = true;
   }
 }

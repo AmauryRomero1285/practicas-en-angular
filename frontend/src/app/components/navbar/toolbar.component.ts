@@ -8,13 +8,14 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ToolbarComponent {
   isSidebarVisible = true;
+  isLoggedIn=true;
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
 
-  @Output() logoutEvent=new EventEmitter<void>();
+  @Output() logoutEvent=new EventEmitter<boolean>();
 
   logout(){
-    this.logoutEvent.emit();
+    this.logoutEvent.emit(false);
   }
 }

@@ -19,8 +19,9 @@ const sessionSchema = new Schema(
       type: String,
     },
     status: {
-      type: ["active", "inactive", "expired", "loggedOut"],
-      default: "inactive",
+      type: String,
+      enum: ["active", "inactive", "expired", "loggedOut","pending","verified"],
+      default: 5,
     },
     count: {
       type: Number,

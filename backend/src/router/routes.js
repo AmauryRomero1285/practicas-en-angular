@@ -1,6 +1,5 @@
 import {Router} from 'express';
 import userController from '../controller/users.controller.js';
-
 const userRouter=Router();
 
 userRouter.get('/users',(req,res)=>{
@@ -10,5 +9,8 @@ userRouter.get('/users',(req,res)=>{
 });
 
 userRouter.post('/register',userController.insertUser);
+userRouter.post('/login',userController.loginUser);
+userRouter.put('/renoveSession',userController.activateSession);
+userRouter.get('/activeSessions',userController.showSessions);
 
 export default userRouter;
