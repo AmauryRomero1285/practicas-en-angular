@@ -1,0 +1,10 @@
+ul li {
+    background: #e0e0e0;
+    color: black;
+    align-self: flex-start;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border-bottom-left-radius: 2px;
+    margin: 5px 0;
+  }

@@ -36,3 +36,11 @@
   border-radius: 15px;
   text-align: center;
 }
+.buscador{
+  padding: 0.5rem;
+  color:#000;
+  margin: 10px 0px;
+  border-radius: 10px;
+  border-color:none;
+  width: 90%;
+}
