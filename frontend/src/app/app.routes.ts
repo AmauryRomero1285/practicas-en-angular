@@ -10,6 +10,7 @@ import { Ejercicio08Component } from './pages/ejercicio08/ejercicio08.component'
 import { Ejercicio09Component } from './pages/ejercicio09/ejercicio09.component';
 import { Ejercicio10Component } from './pages/ejercicio10/ejercicio10.component';
 import { Ejercicio11Component } from './pages/ejercicio11/ejercicio11.component';
+import { FormsComponent } from './components/login/forms.component';
 
 export const routes: Routes = [
   { path: 'page1', component: Ejercicio01Component },
@@ -23,5 +24,6 @@ export const routes: Routes = [
   { path: 'page9', component: Ejercicio09Component },
   { path: 'page10', component: Ejercicio10Component },
   { path: 'page11', component: Ejercicio11Component },
+  { path: 'login', component: FormsComponent },
   { path: '**', redirectTo: 'page1' },
 ];

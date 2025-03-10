@@ -1,34 +1,119 @@
 import { Component } from '@angular/core';
-import { RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterModule, CommonModule,FormsModule],
+  standalone: true,
+  imports: [RouterModule, CommonModule, FormsModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css',
+  styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
   searchTerm: string = '';
 
   sidebarItems = [
-    { name: 'Ejercicio 1', route: '/page1' },
-    { name: 'Ejercicio 2', route: '/page2' },
-    { name: 'Ejercicio 3', route: '/page3' },
-    { name: 'Ejercicio 4', route: '/page4' },
-    { name: 'Ejercicio 5', route: '/page5' },
-    { name: 'Ejercicio 6', route: '/page6' },
-    { name: 'Ejercicio 7', route: '/page7' },
-    { name: 'Ejercicio 8', route: '/page8' },
-    { name: 'Ejercicio 9', route: '/page9' },
-    { name: 'Ejercicio 10', route: '/page10' },
-    { name: 'Ejercicio 11', route: '/page11' },
-    { name: 'Ejercicio 12', route: '/page12' },
+    {
+      name: 'Ejercicio 1',
+      route: '/page1',
+      isOpen: false,
+      menu: {
+        name: 'Nombre del proyecto  ',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
+    },
+    {
+      name: 'Ejercicio 2',
+      route: '/page2',
+      isOpen: false,
+      menu: { name: ' Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 3',
+      route: '/page3',
+      isOpen: false,
+      menu: { name: ' Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 4',
+      route: '/page4',
+      isOpen: false,
+      menu: { name: ' Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 5',
+      route: '/page5',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 6',
+      route: '/page6',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 7',
+      route: '/page7',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 8',
+      route: '/page8',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 9',
+      route: '/page9',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 10',
+      route: '/page10',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 11',
+      route: '/page11',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
+    {
+      name: 'Ejercicio 12',
+      route: '/page12',
+      isOpen: false,
+      menu: { name: 'Descripción del proyecto  ' },
+    },
   ];
+
+  // Limitar los ítems visibles en el navbar (5 elementos iniciales)
+  get displayedItems() {
+    return this.sidebarItems.slice(0, 4); // Mostrar solo los primeros 5 elementos
+  }
+
+  // Filtrar los elementos según la búsqueda
   get filteredItems() {
     return this.sidebarItems.filter((item) =>
       item.name.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
+  }
+
+  // Función para abrir/cerrar el primer nivel de submenú
+  toggleDropdown(index: number) {
+    this.sidebarItems[index].isOpen = !this.sidebarItems[index].isOpen;
+  }
+
+  // Función para abrir/cerrar el submenú
+  toggleSubmenu(index: number) {
+    this.sidebarItems[index].menu.Open = !this.sidebarItems[index].menu.Open;
+    if (!this.sidebarItems[index].menu.Open) {
+      console.log('submenu desplegado');
+    }
   }
 }

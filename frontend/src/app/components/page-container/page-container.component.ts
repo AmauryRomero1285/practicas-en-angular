@@ -4,7 +4,7 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ToolbarComponent } from '../navbar/toolbar.component';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
-import { FormsComponent } from '../forms/forms.component';
+import { FormsComponent } from '../login/forms.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -30,11 +30,11 @@ export class PageContainerComponent {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
 
-  // logout() {
-  //   this.isLoggedIn = false;
-  // }
+   logout() {
+     this.isLoggedIn = false;
+  }
 
-  // login() {
-  //   this.isLoggedIn = true;
-  // }
+  login() {
+    this.isLoggedIn = true;
+   }
 }

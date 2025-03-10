@@ -1,11 +1,72 @@
 <div class="sidebar">
   <h2 class="sidebar-title">Menú</h2>
-  <input class="buscador" type="text" [(ngModel)]="searchTerm" placeholder="Buscar...">
+  <input
+    class="buscador"
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Buscar..."
+  />
+
   <ul class="sidebar-list">
-    <li *ngFor="let item of sidebarItems">
-      <a class="sidebar-item" [routerLink]="item.route" routerLinkActive="active">
+    <!-- Mostrar solo los primeros 5 ítems inicialmente -->
+    <li *ngFor="let item of displayedItems; let i = index">
+      <a
+        class="sidebar-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        (click)="toggleDropdown(i)"
+      >
         {{ item.name }}
       </a>
+
+      <!-- Submenú -->
+      <ul *ngIf="item.isOpen && item.menu" class="submenu">
+        <li>
+          <a class="submenu-item" (click)="toggleSubmenu(i)">
+            {{ item.menu.name }}
+          </a>
+
+          <!-- Sub-submenú -->
+          <ul *ngIf="item.menu.Open && item.menu.submenu" class="submenu">
+            <li>
+              <a class="submenu-item">
+                {{ item.menu.submenu.name }}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Mostrar los resultados filtrados por el buscador -->
+  <ul class="sidebar-list" *ngIf="searchTerm">
+    <li *ngFor="let item of filteredItems; let i = index">
+      <a
+        class="sidebar-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        (click)="toggleDropdown(i)"
+      >
+        {{ item.name }}
+      </a>
+      <!-- Submenú -->
+      <ul *ngIf="item.isOpen && item.menu" class="submenu">
+        <li>
+          <a class="submenu-item" (click)="toggleSubmenu(i)">
+            {{ item.menu.name }}
+          </a>
+
+          <!-- Sub-submenú -->
+          <ul *ngIf="item.menu.Open && item.menu.submenu" class="submenu">
+            <li>
+              <a class="submenu-item">
+                {{ item.menu.submenu.name }}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </li>
   </ul>
 </div>

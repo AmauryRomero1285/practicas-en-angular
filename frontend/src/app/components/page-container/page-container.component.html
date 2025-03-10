@@ -1,6 +1,6 @@
-<div class="container" *ngIf="!isLoggedIn">
+<div class="container" *ngIf="isLoggedIn">
   <!-- Navbar -->
-  <app-toolbar></app-toolbar>
+  <app-toolbar (click)="logout()"></app-toolbar>
 
   <!-- Botón para alternar Sidebar -->
   <button class="toggle-sidebar-btn" (click)="toggleSidebar()">
@@ -27,9 +27,9 @@
   <app-footer [isSidebarVisible]="isSidebarVisible"></app-footer>
 </div>
 
-<div *ngIf="isLoggedIn">
+<div *ngIf="!isLoggedIn">
   <div class="content" style="height: 100vh;">
-    <app-forms ></app-forms>
+    <app-forms (click)="login()"></app-forms>
   </div>
   <app-footer [isSidebarVisible]="!isSidebarVisible"></app-footer>
 </div>
