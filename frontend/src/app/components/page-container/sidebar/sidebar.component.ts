@@ -19,7 +19,7 @@ export class SidebarComponent {
       route: '/page1',
       isOpen: false,
       menu: {
-        name: 'Nombre del proyecto  ',
+        name: 'Ejercicio 1',
         Open: false,
         submenu: { name: 'Descripción del proyecto  ' },
       },
@@ -28,73 +28,127 @@ export class SidebarComponent {
       name: 'Ejercicio 2',
       route: '/page2',
       isOpen: false,
-      menu: { name: ' Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 2',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 3',
       route: '/page3',
       isOpen: false,
-      menu: { name: ' Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 3',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 4',
       route: '/page4',
       isOpen: false,
-      menu: { name: ' Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 4',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 5',
       route: '/page5',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 5 ',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 6',
       route: '/page6',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 6',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 7',
       route: '/page7',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 7',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 8',
       route: '/page8',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 8',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 9',
       route: '/page9',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 9',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 10',
       route: '/page10',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 10',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 11',
       route: '/page11',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 11',
+        Open: false,
+        submenu: { name: 'Descripción del proyecto  ' },
+      },
     },
     {
       name: 'Ejercicio 12',
-      route: '/page12',
+      route: '/page1',
       isOpen: false,
-      menu: { name: 'Descripción del proyecto  ' },
+      menu: {
+        name: 'Ejercicio 12',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
+    {
+      name: 'Tabla',
+      route: '/table',
+      isOpen: false,
+      menu: {
+        name: 'Tabla dinamica',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
     },
   ];
 
   // Limitar los ítems visibles en el navbar (5 elementos iniciales)
   get displayedItems() {
-    return this.sidebarItems.slice(0, 4); // Mostrar solo los primeros 5 elementos
+    return this.sidebarItems.slice(0, 0); // Mostrar solo los primeros 5 elementos
   }
 
   // Filtrar los elementos según la búsqueda

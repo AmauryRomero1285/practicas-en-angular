@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ejercicio04.component.css',
 })
 export class Ejercicio04Component {
-  isLoggedIn = true;
+  isLoggedIn = false;
   isServerRunning = true;
 }

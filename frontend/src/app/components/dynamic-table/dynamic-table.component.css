@@ -1,0 +1,70 @@
+/* Estilos para el contenedor de la tabla */
+div {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* Estilo para el campo de búsqueda */
+  input[matInput] {
+    width: 250px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  input[matInput]:focus {
+    border-color: #3f51b5; /* Color de borde cuando el campo está enfocado */
+    outline: none;
+  }
+  
+  /* Estilos generales de la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para las celdas de la tabla */
+  th.mat-header-cell, td.mat-cell {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  /* Estilo para las cabeceras de columna */
+  th.mat-header-cell {
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Estilos para las filas */
+  tr.mat-row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr.mat-row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Estilo para las filas de la tabla */
+  .mat-header-row, .mat-row {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Bordes de la tabla */
+  .mat-table {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Estilo para las celdas cuando se está pasando el mouse */
+  td.mat-cell:hover {
+    background-color: #e1e1e1;
+  }
+  

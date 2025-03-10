@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ejercicio06.component.css'
 })
 export class Ejercicio06Component {
-  isEditable:boolean=false;
+  isEditable:boolean=true;
 
 }
