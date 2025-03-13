@@ -12,6 +12,9 @@ import { Ejercicio10Component } from './pages/ejercicio10/ejercicio10.component'
 import { Ejercicio11Component } from './pages/ejercicio11/ejercicio11.component';
 import { FormsComponent } from './components/login/forms.component';
 import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
+import { GraficaBasicaComponent } from './grafica-basica/grafica-basica.component';
+
+
 
 export const routes: Routes = [
   { path: 'page1', component: Ejercicio01Component },
@@ -26,6 +29,7 @@ export const routes: Routes = [
   { path: 'page10', component: Ejercicio10Component },
   { path: 'page11', component: Ejercicio11Component },
   { path: 'login', component: FormsComponent },
-  {path:'table',component:DynamicTableComponent},
+  { path: 'table', component: DynamicTableComponent },
+  { path: 'graphics', component: GraficaBasicaComponent},
   { path: '**', redirectTo: 'table' },
 ];

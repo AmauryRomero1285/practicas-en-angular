@@ -144,6 +144,16 @@ export class SidebarComponent {
         submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
       },
     },
+    {
+      name: 'Graficas',
+      route: '/graphics',
+      isOpen: false,
+      menu: {
+        name: 'Gráfica basica',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
   ];
 
   // Limitar los ítems visibles en el navbar (5 elementos iniciales)
