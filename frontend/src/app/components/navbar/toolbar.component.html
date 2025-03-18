@@ -1,16 +1,36 @@
 <nav class="navbar">
   <!-- Contenedor que alinea a la derecha -->
   <div class="ml-auto">
-    <!-- Icono Usuario -->
-    <div class="user-icon-container">
-      <button class="user-button">
-        <span>Usuario</span>
-        <img class="user-avatar" src="https://unsplash.com/es/fotos/silueta-de-la-ilustracion-del-hombre-2LowviVHZ-E" />
+    <!-- Lista de ejercicios -->
+    <div class="exercise-container">
+      <button class="exercise-button">
+        <span>Ejercicios</span>
       </button>
-      <div class="user-dropdown">
-        <button class="dropdown-item" style="width: 8rem;">Perfil</button>
-        <button class="dropdown-item" style="width: 8rem;" (click)="logout()">Cerrar Sesión</button>
+      <div class="exercise-dropdown">
+        <button
+          class="dropdown-item"
+          *ngFor="let item of displayedItems; let i = index"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          style="width: 8rem"
+        >
+          {{ item.name }}
+        </button>
       </div>
+    </div>
+  </div>
+  <!-- Icono Usuario -->
+  <div class="user-icon-container">
+    <button class="user-button">
+      <span>Usuario</span>
+      <img
+        class="user-avatar"
+        src="https://unsplash.com/es/fotos/silueta-de-la-ilustracion-del-hombre-2LowviVHZ-E"
+      />
+    </button>
+    <div class="user-dropdown">
+      <button class="dropdown-item" style="width: 8rem">Perfil</button>
+      <button class="dropdown-item" style="width: 8rem">Cerrar Sesión</button>
     </div>
   </div>
 </nav>

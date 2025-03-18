@@ -10,11 +10,10 @@ import { Ejercicio08Component } from './pages/ejercicio08/ejercicio08.component'
 import { Ejercicio09Component } from './pages/ejercicio09/ejercicio09.component';
 import { Ejercicio10Component } from './pages/ejercicio10/ejercicio10.component';
 import { Ejercicio11Component } from './pages/ejercicio11/ejercicio11.component';
+import { Ejercicio12Component } from './pages/ejercicio12/ejercicio12.component';
 import { FormsComponent } from './components/login/forms.component';
 import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
 import { GraficaBasicaComponent } from './grafica-basica/grafica-basica.component';
-
-
 
 export const routes: Routes = [
   { path: 'page1', component: Ejercicio01Component },
@@ -28,8 +27,10 @@ export const routes: Routes = [
   { path: 'page9', component: Ejercicio09Component },
   { path: 'page10', component: Ejercicio10Component },
   { path: 'page11', component: Ejercicio11Component },
+  { path: 'page12', component: Ejercicio12Component },
+  { path: '', component: Ejercicio12Component },
   { path: 'login', component: FormsComponent },
   { path: 'table', component: DynamicTableComponent },
-  { path: 'graphics', component: GraficaBasicaComponent},
-  { path: '**', redirectTo: 'table' },
+  { path: 'graphics', component: GraficaBasicaComponent },
+  { path: '**', redirectTo: '' },
 ];

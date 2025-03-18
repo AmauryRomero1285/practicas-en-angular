@@ -1,5 +1,4 @@
 <div class="sidebar">
-  <h2 class="sidebar-title">Menú</h2>
   <input
     class="buscador"
     type="text"
@@ -9,11 +8,10 @@
 
   <ul class="sidebar-list">
     <!-- Mostrar solo los primeros 5 ítems inicialmente -->
-    <li *ngFor="let item of displayedItems; let i = index">
+    <li *ngFor="let item of displayedItems;let i=index">
       <a
         class="sidebar-item"
         [routerLink]="item.route"
-        routerLinkActive="active"
         (click)="toggleDropdown(i)"
       >
         {{ item.name }}
@@ -41,7 +39,7 @@
 
   <!-- Mostrar los resultados filtrados por el buscador -->
   <ul class="sidebar-list" *ngIf="searchTerm">
-    <li *ngFor="let item of filteredItems; let i = index">
+    <li *ngFor="let item of displayedItems; let i = index">
       <a
         class="sidebar-item"
         [routerLink]="item.route"

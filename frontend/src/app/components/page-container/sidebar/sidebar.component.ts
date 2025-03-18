@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Router,NavigationEnd } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +12,17 @@ import { CommonModule } from '@angular/common';
 })
 export class SidebarComponent {
   searchTerm: string = '';
+  currentRoute: string = '';
 
+  //
+  constructor(private router: Router) {
+    // Escucha los eventos del router para detectar cambios en la ruta
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url; // Obtiene la ruta actual
+      }
+    });
+  }
   sidebarItems = [
     {
       name: 'Ejercicio 1',
@@ -126,7 +136,7 @@ export class SidebarComponent {
     },
     {
       name: 'Ejercicio 12',
-      route: '/page1',
+      route: '/page12',
       isOpen: false,
       menu: {
         name: 'Ejercicio 12',
@@ -144,21 +154,11 @@ export class SidebarComponent {
         submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
       },
     },
-    {
-      name: 'Graficas',
-      route: '/graphics',
-      isOpen: false,
-      menu: {
-        name: 'Gráfica basica',
-        Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
-      },
-    },
   ];
 
-  // Limitar los ítems visibles en el navbar (5 elementos iniciales)
-  get displayedItems() {
-    return this.sidebarItems.slice(0, 0); // Mostrar solo los primeros 5 elementos
+  //
+    get displayedItems() {
+    return this.sidebarItems.filter((item) => item.route === this.currentRoute);
   }
 
   // Filtrar los elementos según la búsqueda
