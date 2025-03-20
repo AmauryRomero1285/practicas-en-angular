@@ -4,9 +4,9 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ToolbarComponent } from '../navbar/toolbar.component';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
-import { FormsComponent } from '../login/forms.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-page-container',
@@ -16,7 +16,6 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ToolbarComponent,
     BreadcrumbComponent,
-    FormsComponent,
     CommonModule,
     FormsModule,
   ],
@@ -25,16 +24,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class PageContainerComponent {
   isSidebarVisible = true;
-  isLoggedIn = false;
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
-
-   logout() {
-     this.isLoggedIn = false;
+   isLoggedIn: boolean=true;
+  constructor(private authService: AuthService) {
+    // Suscribirse al observable para mantener el estado actualizado
+    this.authService.isLoggedIn$.subscribe(status => {
+      this.isLoggedIn = status;
+    });
   }
-
-  login() {
-    this.isLoggedIn = true;
-   }
 }

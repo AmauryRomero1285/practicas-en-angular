@@ -1,5 +1,6 @@
-import { Component, Output,EventEmitter } from '@angular/core';
-import { error } from 'console';
+import { Component} from '@angular/core';
+import { AuthService } from '../../auth.service';
+
 
 @Component({
   selector: 'app-forms',
@@ -9,7 +10,16 @@ import { error } from 'console';
   standalone: true,
 })
 export class FormsComponent {
-  user:string='';
+  username:string='';
   password:string='';
+
+  constructor(private authService: AuthService) {}
+
+  onLogin(): void {
+    // Aquí puedes agregar la validación del formulario
+    if (this.username && this.password) {
+      this.authService.login();
+    }
+  }
 }
 

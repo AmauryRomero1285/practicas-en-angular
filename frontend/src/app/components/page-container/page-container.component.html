@@ -1,4 +1,4 @@
-<div class="container" *ngIf="isLoggedIn">
+<div class="container">
   <!-- Navbar -->
   <app-toolbar></app-toolbar>
 
@@ -25,11 +25,4 @@
 
   <!-- Footer dinámico -->
   <app-footer [isSidebarVisible]="isSidebarVisible"></app-footer>
-</div>
-
-<div *ngIf="!isLoggedIn">
-  <div class="content" style="height: 100vh;">
-    <app-forms (click)="login()"></app-forms>
-  </div>
-  <app-footer [isSidebarVisible]="!isSidebarVisible"></app-footer>
 </div>

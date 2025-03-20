@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageContainerComponent } from "./components/page-container/page-container.component";
 import { FormsModule } from '@angular/forms';
+import { FormsComponent } from "./components/login/forms.component";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     PageContainerComponent,
-    FormsModule
+    FormsModule,
+    FormsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

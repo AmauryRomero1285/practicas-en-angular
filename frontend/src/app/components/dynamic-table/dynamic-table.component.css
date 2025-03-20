@@ -1,70 +1,82 @@
-/* Estilos para el contenedor de la tabla */
-div {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
+/* Contenedor principal de la tabla */
+.table-container {
+  height:75vh; 
+  display: flex;
+  flex-direction: column; 
+  overflow: hidden;
+}
+
+/* Contenedor scrollable para la tabla */
+.table-scrollable {
+  flex-grow: 1; 
+  overflow-y: auto;
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
+}
+
+/* Campo de búsqueda */
+input[matInput] {
+  width: 100%; 
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[matInput]:focus {
+  border-color: #3f51b5; 
+  box-shadow: 0 0 8px rgba(63, 81, 181, 0.5); 
+  outline: none;
+}
+
+/* Tabla principal */
+table {
+  width: 100%; 
+  border-collapse:separate;
   
-  /* Estilo para el campo de búsqueda */
-  input[matInput] {
-    width: 250px;
-    padding: 8px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-  
-  input[matInput]:focus {
-    border-color: #3f51b5; /* Color de borde cuando el campo está enfocado */
-    outline: none;
-  }
-  
-  /* Estilos generales de la tabla */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  /* Estilos para las celdas de la tabla */
-  th.mat-header-cell, td.mat-cell {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-  
-  /* Estilo para las cabeceras de columna */
-  th.mat-header-cell {
-    background-color: #3f51b5;
-    color: white;
-    font-weight: bold;
-  }
-  
-  /* Estilos para las filas */
-  tr.mat-row:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  tr.mat-row:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Estilo para las filas de la tabla */
-  .mat-header-row, .mat-row {
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Bordes de la tabla */
-  .mat-table {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  /* Estilo para las celdas cuando se está pasando el mouse */
-  td.mat-cell:hover {
-    background-color: #e1e1e1;
-  }
-  
+}
+
+th.mat-header-cell, td.mat-cell {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Cabecera de la tabla */
+th.mat-header-cell {
+  background-color: #3f51b5; 
+  color: #ffffff; 
+  font-weight: bold;
+  text-transform: uppercase; 
+}
+
+/* Filas alternadas */
+tr.mat-row:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Resaltado de fila al pasar el mouse */
+tr.mat-row:hover {
+  background-color: #e0e0e0;
+  cursor: pointer; 
+}
+
+/* Transiciones suaves para filas y celdas */
+.mat-header-row, .mat-row {
+  transition: background-color 0.3s ease;
+}
+
+/* Bordes de la tabla */
+.mat-table {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Celdas resaltadas al pasar el mouse */
+td.mat-cell:hover {
+  background-color: #e9e9e9;
+}

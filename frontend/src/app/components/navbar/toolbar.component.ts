@@ -2,17 +2,24 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-toolbar',
   standalone: true, // Especificar si es standalone
-  imports: [RouterModule, CommonModule,FormsModule],
+  imports: [RouterModule, CommonModule, FormsModule],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css'],
 })
 export class ToolbarComponent {
   isSidebarVisible = true;
-  isLoggedIn = true;
+  //
+  constructor(private authService: AuthService) {}
+
+  onLogout(): void {
+    this.authService.logout(); // Llamamos al método de logout del servicio
+  }
+  //
   searchTerm: string = '';
 
   // Lista completa de elementos
@@ -29,8 +36,9 @@ export class ToolbarComponent {
     { name: 'Ejercicio 10', route: '/page10' },
     { name: 'Ejercicio 11', route: '/page11' },
     { name: 'Ejercicio 12', route: '/page12' },
-    { name: 'Tabla', route: '/table' },
-    { name: 'Gráficas', route: '/graphics' },
+    { name: 'Tabla 1', route: '/table' },
+    { name: 'Gráfica Básica', route: '/graphic1' },
+    { name: 'Gráfica Especializada', route: '/graphic2' }
   ];
 
   // Filtrar los elementos según la búsqueda

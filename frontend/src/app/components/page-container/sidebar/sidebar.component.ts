@@ -155,7 +155,17 @@ export class SidebarComponent {
     },
     {
       name: 'Gráficas',
-      route: '/graphics',
+      route: '/graphic1',
+      isOpen: false,
+      menu: {
+        name: 'Gráficas',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
+    {
+      name: 'Gráficas',
+      route: '/graphic1',
       isOpen: false,
       menu: {
         name: 'Gráficas',

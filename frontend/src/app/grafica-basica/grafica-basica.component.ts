@@ -1,6 +1,5 @@
 import { Component,Inject,NgZone,PLATFORM_ID } from '@angular/core';
 import  {isPlatformBrowser}from '@angular/common';
-import { GraficaEspecializadaComponent } from '../grafica-especializada/grafica-especializada.component';
 
 // amCharts imports
 import * as am5 from '@amcharts/amcharts5';
@@ -10,7 +9,7 @@ import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
 @Component({
   selector: 'app-grafica-basica',
-  imports: [GraficaEspecializadaComponent],
+  imports: [],
   templateUrl: './grafica-basica.component.html',
   styleUrl: './grafica-basica.component.css'
 })

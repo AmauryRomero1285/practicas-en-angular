@@ -1,34 +1,44 @@
-<div>
-    <input matInput [(ngModel)]="filterValue" placeholder="Buscar...">
+<div class="table-container ">
+  <div>
+    <input matInput [(ngModel)]="filterValue" placeholder="Filtrar por nombre, apellidos o ciudad favorita">
   </div>
-  
-  <table mat-table [dataSource]="filteredDataSource">
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> Position </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="Nombre">
-      <th mat-header-cell *matHeaderCellDef> Nombre </th>
-      <td mat-cell *matCellDef="let element"> {{element.Nombre}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="Apellido_Paterno">
-      <th mat-header-cell *matHeaderCellDef> Apellido Paterno </th>
-      <td mat-cell *matCellDef="let element"> {{element.Apellido_Paterno}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="Apellido_Materno">
-      <th mat-header-cell *matHeaderCellDef> Apellido Materno </th>
-      <td mat-cell *matCellDef="let element"> {{element.Apellido_Materno}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="CdFavorita">
-      <th mat-header-cell *matHeaderCellDef> CdFavorita </th>
-      <td mat-cell *matCellDef="let element"> {{element.CdFavorita}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  
+  <!-- Tabla con desplazamiento -->
+  <div class="table-scrollable">
+    <table mat-table [dataSource]="filteredDataSource">
+      <!-- Columna de Posición -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> Posición </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+
+      <!-- Columna de Nombre -->
+      <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.Nombre}} </td>
+      </ng-container>
+
+      <!-- Columna de Apellido Paterno -->
+      <ng-container matColumnDef="Apellido Paterno">
+        <th mat-header-cell *matHeaderCellDef> Apellido Paterno </th>
+        <td mat-cell *matCellDef="let element"> {{element.Apellido_Paterno}} </td>
+      </ng-container>
+
+      <!-- Columna de Apellido Materno -->
+      <ng-container matColumnDef="Apellido Materno">
+        <th mat-header-cell *matHeaderCellDef> Apellido Materno </th>
+        <td mat-cell *matCellDef="let element"> {{element.Apellido_Materno}} </td>
+      </ng-container>
+
+      <!-- Columna de Ciudad Favorita -->
+      <ng-container matColumnDef="CdFavorita">
+        <th mat-header-cell *matHeaderCellDef> Ciudad Favorita </th>
+        <td mat-cell *matCellDef="let element"> {{element.CdFavorita}} </td>
+      </ng-container>
+
+      <!-- Fila de Encabezado -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <!-- Filas de Datos -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

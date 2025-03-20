@@ -1,4 +1,10 @@
-<app-page-container></app-page-container>
+<div *ngIf="!authService.getLoginState()">
+  <app-forms></app-forms>
+</div>
+
+<div *ngIf="authService.getLoginState()">
+  <app-page-container></app-page-container>
+</div>
 
 
 <!--
