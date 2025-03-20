@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  searchTerm: string = '';
   currentRoute: string = '';
 
   //
@@ -19,7 +18,7 @@ export class SidebarComponent {
     // Escucha los eventos del router para detectar cambios en la ruta
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.currentRoute = event.url; // Obtiene la ruta actual
+        this.currentRoute = event.url;
       }
     });
   }
@@ -154,18 +153,21 @@ export class SidebarComponent {
         submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
       },
     },
+    {
+      name: 'Gráficas',
+      route: '/graphics',
+      isOpen: false,
+      menu: {
+        name: 'Gráficas',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
   ];
 
   //
     get displayedItems() {
     return this.sidebarItems.filter((item) => item.route === this.currentRoute);
-  }
-
-  // Filtrar los elementos según la búsqueda
-  get filteredItems() {
-    return this.sidebarItems.filter((item) =>
-      item.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
   }
 
   // Función para abrir/cerrar el primer nivel de submenú
@@ -176,8 +178,6 @@ export class SidebarComponent {
   // Función para abrir/cerrar el submenú
   toggleSubmenu(index: number) {
     this.sidebarItems[index].menu.Open = !this.sidebarItems[index].menu.Open;
-    if (!this.sidebarItems[index].menu.Open) {
-      console.log('submenu desplegado');
-    }
+
   }
 }

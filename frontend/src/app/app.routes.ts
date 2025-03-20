@@ -28,9 +28,8 @@ export const routes: Routes = [
   { path: 'page10', component: Ejercicio10Component },
   { path: 'page11', component: Ejercicio11Component },
   { path: 'page12', component: Ejercicio12Component },
-  { path: '', component: Ejercicio12Component },
   { path: 'login', component: FormsComponent },
   { path: 'table', component: DynamicTableComponent },
   { path: 'graphics', component: GraficaBasicaComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'page1' },
 ];

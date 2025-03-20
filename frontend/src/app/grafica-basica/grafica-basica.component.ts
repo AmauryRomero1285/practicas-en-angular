@@ -31,7 +31,7 @@ export class GraficaBasicaComponent {
   ngAfterViewInit() {
     // Chart code goes in here
     this.browserOnly(() => {
-      let root = am5.Root.new("chartdiv");
+      let root = am5.Root.new("chartdiv1");
 
       root.setThemes([am5themes_Animated.new(root)]);
 
