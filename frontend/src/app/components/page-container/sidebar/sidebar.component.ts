@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule,Router,NavigationEnd } from '@angular/router';
+import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -14,14 +14,26 @@ export class SidebarComponent {
   currentRoute: string = '';
 
   //
-  constructor(private router: Router) {
-    // Escucha los eventos del router para detectar cambios en la ruta
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    // Detecta la ruta actual al cargar el componente
+    this.currentRoute = this.router.url;
+
+    // Escucha cambios en las rutas para sincronizar la UI
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
+
+        // Cierra todos los menús y submenús al navegar
+        this.sidebarItems.forEach((item) => {
+          item.isOpen = false;
+          item.menu.Open = false;
+        });
       }
     });
   }
+  //
   sidebarItems = [
     {
       name: 'Ejercicio 1',
@@ -154,7 +166,7 @@ export class SidebarComponent {
       },
     },
     {
-      name: 'Gráficas',
+      name: 'Gráfica Básica',
       route: '/graphic1',
       isOpen: false,
       menu: {
@@ -164,8 +176,8 @@ export class SidebarComponent {
       },
     },
     {
-      name: 'Gráficas',
-      route: '/graphic1',
+      name: 'Gráfica Especializada',
+      route: '/graphic2',
       isOpen: false,
       menu: {
         name: 'Gráficas',
@@ -176,18 +188,19 @@ export class SidebarComponent {
   ];
 
   //
-    get displayedItems() {
+  get displayedItems() {
     return this.sidebarItems.filter((item) => item.route === this.currentRoute);
   }
 
   // Función para abrir/cerrar el primer nivel de submenú
   toggleDropdown(index: number) {
-    this.sidebarItems[index].isOpen = !this.sidebarItems[index].isOpen;
+    this.sidebarItems.forEach((item, i) => {
+      item.isOpen = i === index ? !item.isOpen : false;
+    });
   }
 
   // Función para abrir/cerrar el submenú
-  toggleSubmenu(index: number) {
+  toggleSubmenu(index: number): void {
     this.sidebarItems[index].menu.Open = !this.sidebarItems[index].menu.Open;
-
   }
 }

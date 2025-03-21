@@ -33,5 +33,5 @@ export const routes: Routes = [
   { path: 'table', component: DynamicTableComponent },
   { path: 'graphic1', component: GraficaBasicaComponent },
   { path: 'graphic2', component: GraficaEspecializadaComponent },
-  { path: '**', redirectTo: 'page1' },
+  { path: '**', redirectTo: '' },
 ];

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageContainerComponent } from "./components/page-container/page-container.component";
 import { FormsModule } from '@angular/forms';
 import { FormsComponent } from "./components/login/forms.component";
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -18,4 +19,5 @@ import { FormsComponent } from "./components/login/forms.component";
 })
 export class AppComponent {
   title = 'ManualEjercicios_Angular_230190';
+  constructor(public authService: AuthService) {}
 }

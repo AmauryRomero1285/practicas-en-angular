@@ -17,7 +17,8 @@ export class ToolbarComponent {
   constructor(private authService: AuthService) {}
 
   onLogout(): void {
-    this.authService.logout(); // Llamamos al método de logout del servicio
+    this.authService.logout();
+    console.log('Logged out, state: '+ this.authService.logout())
   }
   //
   searchTerm: string = '';

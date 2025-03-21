@@ -4,20 +4,21 @@
       <a
         class="sidebar-item"
         [routerLink]="item.route"
+        [ngClass]="{ active: currentRoute === item.route }"
         (click)="toggleDropdown(i)"
       >
         {{ item.name }}
       </a>
 
       <!-- Submenú -->
-      <ul *ngIf="item.isOpen && item.menu" class="submenu">
+      <ul *ngIf="item.isOpen" class="submenu">
         <li>
           <a class="submenu-item" (click)="toggleSubmenu(i)">
             {{ item.menu.name }}
           </a>
 
           <!-- Sub-submenú -->
-          <ul *ngIf="!item.menu.Open && item.menu.submenu" class="submenu">
+          <ul *ngIf="!item.menu.Open" class="submenu">
             <li>
               <a class="submenu-item">
                 {{ item.menu.submenu.name }}
