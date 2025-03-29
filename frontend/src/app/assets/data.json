@@ -28,5 +28,13 @@
   { "id": 27, "nombre": "Sensor", "tipo": "Presión", "valor": "1006 hPa" },
   { "id": 28, "nombre": "Sensor", "tipo": "Temperatura", "valor": "23.5°C" },
   { "id": 29, "nombre": "Sensor", "tipo": "Humedad", "valor": "56%" },
-  { "id": 30, "nombre": "Sensor", "tipo": "Presión", "valor": "1014 hPa" }
+  { "id": 30, "nombre": "Sensor", "tipo": "Humedad", "valor": "30%" },
+  { "id": 31, "nombre": "Sensor", "tipo": "Humedad", "valor": "63%" },
+  { "id": 32, "nombre": "Sensor", "tipo": "Humedad", "valor": "45%" },
+  { "id": 33, "nombre": "Sensor", "tipo": "Temperatura", "valor": "19.5°C" },
+  { "id": 34, "nombre": "Sensor", "tipo": "Humedad", "valor": "61%" },
+  { "id": 35, "nombre": "Sensor", "tipo": "Humedad", "valor": "13.5%" },
+  { "id": 36, "nombre": "Sensor", "tipo": "Temperatura", "valor": "23.5°C" },
+  { "id": 37, "nombre": "Sensor", "tipo": "Humedad", "valor": "56%" },
+  { "id": 38, "nombre": "Sensor", "tipo": "Humedad", "valor": "10%" }
 ]

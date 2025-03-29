@@ -197,7 +197,7 @@ export class SidebarComponent {
     },
     {
       name: 'Gráfica Básica',
-      route: '/graphic1',
+      route: '/basic-graph',
       isOpen: false,
       menu: {
         name: 'Gráficas',
@@ -207,7 +207,27 @@ export class SidebarComponent {
     },
     {
       name: 'Gráfica Especializada',
-      route: '/graphic2',
+      route: '/assigned-graph',
+      isOpen: false,
+      menu: {
+        name: 'Gráficas',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
+    {
+      name: 'Gráfica de la API',
+      route: '/api-graph',
+      isOpen: false,
+      menu: {
+        name: 'Gráficas',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
+    {
+      name: 'Gráfica JSON',
+      route: '/json-graph',
       isOpen: false,
       menu: {
         name: 'Gráficas',

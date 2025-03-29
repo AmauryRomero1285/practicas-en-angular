@@ -4,6 +4,7 @@ import { PageContainerComponent } from "./components/page-container/page-contain
 import { FormsModule } from '@angular/forms';
 import { FormsComponent } from "./components/login/forms.component";
 import { AuthService } from './auth.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { AuthService } from './auth.service';
     CommonModule,
     PageContainerComponent,
     FormsModule,
-    FormsComponent
+    FormsComponent,
+    RouterModule
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

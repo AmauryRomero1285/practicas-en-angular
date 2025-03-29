@@ -22,8 +22,11 @@ import { FormsComponent } from './components/login/forms.component';
 //graficas
 import { GraficaBasicaComponent } from './graphs/grafica-basica/grafica-basica.component';
 import { GraficaEspecializadaComponent } from './graphs/grafica-especializada/grafica-especializada.component';
+import { ApiGraphComponent } from './graphs/api-graph/api-graph.component';
+import { JsonGraphComponent } from './graphs/json-graph/json-graph.component';
 
 export const routes: Routes = [
+  //ejercicios
   { path: 'page1', component: Ejercicio01Component },
   { path: 'page2', component: Ejercicio02Component },
   { path: 'page3', component: Ejercicio03Component },
@@ -36,12 +39,17 @@ export const routes: Routes = [
   { path: 'page10', component: Ejercicio10Component },
   { path: 'page11', component: Ejercicio11Component },
   { path: 'page12', component: Ejercicio12Component },
+  //extras
   { path: 'login', component: FormsComponent },
+  //tablas
   { path: 'simple-table', component: DynamicTableComponent },
   { path: 'dataTable-table', component: DataTableComponent },
   { path: 'json-table', component: JsonTableComponent },
   { path: 'api-table', component: ApiTableComponent },
-  { path: 'graphic1', component: GraficaBasicaComponent },
-  { path: 'graphic2', component: GraficaEspecializadaComponent },
+  //graficas
+  { path: 'basic-graph', component: GraficaBasicaComponent },
+  { path: 'assigned-graph', component: GraficaEspecializadaComponent },
+  { path: 'api-graph', component: ApiGraphComponent },
+  { path: 'json-graph', component: JsonGraphComponent },
   { path: '**', redirectTo: 'page1' },
 ];

@@ -2,11 +2,12 @@ import { Component} from '@angular/core';
 import { AuthService } from '../../auth.service';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-forms',
-  imports: [FormsModule,FooterComponent],
+  imports: [FormsModule,FooterComponent,RouterModule],
   templateUrl: './forms.component.html',
   styleUrl: './forms.component.css',
   standalone: true,

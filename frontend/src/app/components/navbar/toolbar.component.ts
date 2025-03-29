@@ -48,8 +48,10 @@ export class ToolbarComponent {
 
   dropdownGraphics = [
     //graficas
-    { name: 'Gráfica Básica', route: '/graphic1' },
-    { name: 'Gráfica Especializada', route: '/graphic2' },
+    { name: 'Gráfica Básica', route: 'basic-graph' },
+    { name: 'Gráfica Especializada', route: 'assigned-graph' },
+    { name: 'Gráfica de la API', route: 'api-graph' },
+    { name: 'Gráfica JSON', route: 'json-graph' },
   ];
 
   // Filtrar los elementos de ejercicios
