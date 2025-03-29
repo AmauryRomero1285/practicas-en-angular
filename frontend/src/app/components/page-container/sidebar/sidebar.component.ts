@@ -17,23 +17,23 @@ export class SidebarComponent {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    // Detecta la ruta actual al cargar el componente
     this.currentRoute = this.router.url;
-
-    // Escucha cambios en las rutas para sincronizar la UI
+  
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
-
-        // Cierra todos los menús y submenús al navegar
+  
+        // Asegurar que el item correspondiente esté abierto
         this.sidebarItems.forEach((item) => {
-          item.isOpen = false;
-          item.menu.Open = false;
+          item.isOpen = item.route === this.currentRoute;
+          item.menu.Open = item.isOpen;
         });
       }
     });
   }
+  
   //
+  searchTerm: string = '';
   sidebarItems = [
     {
       name: 'Ejercicio 1',
@@ -156,11 +156,41 @@ export class SidebarComponent {
       },
     },
     {
-      name: 'Tabla',
-      route: '/table',
+      name: 'Tabla Dinámica',
+      route: '/simple-table',
       isOpen: false,
       menu: {
         name: 'Tabla dinamica',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
+    {
+      name: 'Tabla de Datos',
+      route: '/dataTable-table',
+      isOpen: false,
+      menu: {
+        name: 'Tabla dinamica',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
+    {
+      name: 'Tabla JSON',
+      route: '/json-table',
+      isOpen: false,
+      menu: {
+        name: 'Tabla JSON',
+        Open: false,
+        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+      },
+    },
+    {
+      name: 'Tabla de la API',
+      route: '/api-table',
+      isOpen: false,
+      menu: {
+        name: 'Tabla API',
         Open: false,
         submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
       },
@@ -189,18 +219,42 @@ export class SidebarComponent {
 
   //
   get displayedItems() {
-    return this.sidebarItems.filter((item) => item.route === this.currentRoute);
+    if (!this.searchTerm.trim()) {
+      return this.sidebarItems.filter(item => item.route === this.currentRoute);
+    }
+    return this.sidebarItems.filter(item => 
+      item.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      item.menu.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
   }
+  
 
   // Función para abrir/cerrar el primer nivel de submenú
   toggleDropdown(index: number) {
     this.sidebarItems.forEach((item, i) => {
-      item.isOpen = i === index ? !item.isOpen : false;
+      if (i === index) {
+        item.isOpen = !item.isOpen;
+        item.menu.Open = item.isOpen;
+      } else {
+        item.isOpen = false;
+        item.menu.Open = false; 
+      }
     });
   }
+  
+  
 
   // Función para abrir/cerrar el submenú
   toggleSubmenu(index: number): void {
-    this.sidebarItems[index].menu.Open = !this.sidebarItems[index].menu.Open;
+    const item = this.sidebarItems[index];
+  
+    // Alternar solo el submenú sin afectar otros
+    item.menu.Open = !item.menu.Open;
+  
+    if (item.menu.Open) {
+      item.isOpen = true;
+    }
   }
+  
+  
 }

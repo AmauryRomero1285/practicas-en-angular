@@ -18,13 +18,13 @@ export class ToolbarComponent {
 
   onLogout(): void {
     this.authService.logout();
-    console.log('Logged out, state: '+ this.authService.logout())
+    console.log('Logged out, state: ' + this.authService.logout());
   }
   //
-  searchTerm: string = '';
 
-  // Lista completa de elementos
-  dropdownItems = [
+
+  dropdownExercises = [
+    //ejercicios
     { name: 'Ejercicio 1', route: '/page1' },
     { name: 'Ejercicio 2', route: '/page2' },
     { name: 'Ejercicio 3', route: '/page3' },
@@ -37,25 +37,49 @@ export class ToolbarComponent {
     { name: 'Ejercicio 10', route: '/page10' },
     { name: 'Ejercicio 11', route: '/page11' },
     { name: 'Ejercicio 12', route: '/page12' },
-    { name: 'Tabla 1', route: '/table' },
-    { name: 'Gráfica Básica', route: '/graphic1' },
-    { name: 'Gráfica Especializada', route: '/graphic2' }
+  ];
+  dropdownTables = [
+    //tablas
+    { name: 'Tabla Dinámica', route: '/simple-table' },
+    { name: 'Tabla de Datos', route: '/dataTable-table' },
+    { name: 'Tabla JSON', route: '/json-table' },
+    { name: 'Tabla de la API', route: '/api-table' },
   ];
 
-  // Filtrar los elementos según la búsqueda
-  get filteredItems() {
-    return this.dropdownItems.filter((item) =>
-      item.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
+  dropdownGraphics = [
+    //graficas
+    { name: 'Gráfica Básica', route: '/graphic1' },
+    { name: 'Gráfica Especializada', route: '/graphic2' },
+  ];
+
+  // Filtrar los elementos de ejercicios
+  get filteredExercises() {
+    return this.dropdownExercises
   }
 
-  // Limitar la cantidad de elementos mostrados (máx. 15)
-  get displayedItems() {
-    return this.filteredItems;
+  //filtrar tablas
+  get filteredTables() {
+    return this.dropdownTables
   }
+    //filtrar graficas
+    get filteredGraphics() {
+      return this.dropdownGraphics
+    }
+
+  // Limitar la cantidad de elementos mostrados (máx. 15)
+  get displayedExercises() {
+    return this.filteredExercises;
+  }
+  // Limitar la cantidad de elementos mostrados (máx. 15)
+  get displayedTables() {
+    return this.filteredTables;
+  }
+    // Limitar la cantidad de elementos mostrados (máx. 15)
+    get displayedGraphs() {
+      return this.filteredGraphics;
+    }
 
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
-
 }

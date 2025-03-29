@@ -103,3 +103,19 @@
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
+
+.buscador {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  width: 100%;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  color:#000;
+}
+
+.buscador:focus {
+  outline: none;
+  border-color: #28302b;
+  box-shadow: 0 0 5px rgba(40, 48, 43, 0.3);
+}

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TablaSensoresComponent } from './tabla-sensores.component';
+import { DataTableComponent } from './data-table.component';
 
-describe('TablaSensoresComponent', () => {
-  let component: TablaSensoresComponent;
-  let fixture: ComponentFixture<TablaSensoresComponent>;
+describe('DataTableComponent', () => {
+  let component: DataTableComponent;
+  let fixture: ComponentFixture<DataTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TablaSensoresComponent]
+      imports: [DataTableComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TablaSensoresComponent);
+    fixture = TestBed.createComponent(DataTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

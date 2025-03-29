@@ -1,0 +1,44 @@
+<div class="container ml-3">
+  <!-- Selector de página -->
+  <div class="row mb-3">
+    <div class="col">
+      <select id="page" class="form-select" (change)="cambiarBloque($event)">
+        <option *ngFor="let pagina of paginas; let i = index" [value]="i + 1">Bloque {{ i + 1 }}</option>
+      </select>
+           
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Año</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Transmisión</th>
+          <th>Kilometraje</th>
+          <th>Tipo de Combustible</th>
+          <th>Impuesto</th>
+          <th>MPG</th>
+          <th>Tamaño del Motor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dato of bloqueActual">
+          <td>{{ dato.id }}</td>
+          <td>{{ dato.year }}</td>
+          <td>{{ dato.brand }}</td>
+          <td>{{ dato.price }}</td>
+          <td>{{ dato.transmission }}</td>
+          <td>{{ dato.mileage }}</td>
+          <td>{{ dato.fuelType }}</td>
+          <td>{{ dato.tax }}</td>
+          <td>{{ dato.mpg }}</td>
+          <td>{{ dato.engineSize }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

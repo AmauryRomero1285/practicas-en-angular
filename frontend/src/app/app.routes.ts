@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+//ejercicios
 import { Ejercicio01Component } from './pages/ejercicio01/ejercicio01.component';
 import { Ejercicio02Component } from './pages/ejercicio02/ejercicio02.component';
 import { Ejercicio03Component } from './pages/ejercicio03/ejercicio03.component';
@@ -11,10 +12,16 @@ import { Ejercicio09Component } from './pages/ejercicio09/ejercicio09.component'
 import { Ejercicio10Component } from './pages/ejercicio10/ejercicio10.component';
 import { Ejercicio11Component } from './pages/ejercicio11/ejercicio11.component';
 import { Ejercicio12Component } from './pages/ejercicio12/ejercicio12.component';
+//tablas
+import { DynamicTableComponent } from './tables/dynamic-table/dynamic-table.component';
+import { DataTableComponent } from './tables/data-table/data-table.component';
+import { JsonTableComponent } from './tables/json-table/json-table.component';
+import { ApiTableComponent } from './tables/api-table/api-table.component';
+//extras
 import { FormsComponent } from './components/login/forms.component';
-import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
-import { GraficaBasicaComponent } from './grafica-basica/grafica-basica.component';
-import { GraficaEspecializadaComponent } from './grafica-especializada/grafica-especializada.component';
+//graficas
+import { GraficaBasicaComponent } from './graphs/grafica-basica/grafica-basica.component';
+import { GraficaEspecializadaComponent } from './graphs/grafica-especializada/grafica-especializada.component';
 
 export const routes: Routes = [
   { path: 'page1', component: Ejercicio01Component },
@@ -30,8 +37,11 @@ export const routes: Routes = [
   { path: 'page11', component: Ejercicio11Component },
   { path: 'page12', component: Ejercicio12Component },
   { path: 'login', component: FormsComponent },
-  { path: 'table', component: DynamicTableComponent },
+  { path: 'simple-table', component: DynamicTableComponent },
+  { path: 'dataTable-table', component: DataTableComponent },
+  { path: 'json-table', component: JsonTableComponent },
+  { path: 'api-table', component: ApiTableComponent },
   { path: 'graphic1', component: GraficaBasicaComponent },
   { path: 'graphic2', component: GraficaEspecializadaComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'page1' },
 ];

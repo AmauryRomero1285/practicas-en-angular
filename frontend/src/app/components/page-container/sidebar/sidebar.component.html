@@ -1,4 +1,11 @@
 <div class="sidebar">
+      <!-- Buscador -->
+      <input
+      class="buscador"
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Busca tus ejercicios aquí..."
+    />
   <ul class="sidebar-list">
     <li *ngFor="let item of displayedItems; let i = index">
       <a

@@ -16,29 +16,20 @@
   justify-content: flex-end;
 }
 
-.buscador {
-  padding: 0.5rem;
-  border-radius: 10px;
-  border: 1px solid #fff;
-  width: 14rem;
-  font-size: 1rem;
-  transition: all 0.3s ease-in-out;
-  color:#000;
-}
-
-.buscador:focus {
-  outline: none;
-  border-color: #28302b;
-  box-shadow: 0 0 5px rgba(40, 48, 43, 0.3);
-}
-
-
 .user-icon-container,
 .exercise-container {
   position: relative;
 }
 
-.user-button,
+.user-button{
+  border-radius: 100%;
+  padding: 15px;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/026/551/249/non_2x/profile-page-pixelated-ui-icon-address-book-management-contact-user-name-phone-number-editable-8bit-graphic-element-outline-isolated-user-interface-image-for-web-mobile-app-retro-style-vector.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .exercise-button {
   display: flex;
   align-items: center;
@@ -51,7 +42,6 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.user-button:hover,
 .exercise-button:hover {
   background-color: rgba(40, 48, 43, 0.15);
 }

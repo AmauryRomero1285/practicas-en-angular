@@ -10,7 +10,7 @@ import { NgOptimizedImage } from '@angular/common';
   <ul>
     <li>
       Static Image:
-      <img ngSrc="../assets/image.png" alt="image" width="64" height="32"/>
+      <img ngSrc="/app/assets/user.png" alt="image" width="64" height="32"/>
     </li>
     <li>
       Dynamic Image:
@@ -21,7 +21,7 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './ejercicio11.component.css'
 })
 export class Ejercicio11Component {
-  logoUrl = '../assets/image.png';
+  logoUrl = '/app/assets/user.png';
   logoAlt = 'img';
   username = 'Deray369';
 }
