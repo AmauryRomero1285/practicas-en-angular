@@ -1,1 +1,14 @@
-<header [class.footer-sidebar-active]="isSidebarVisible">Breadcrumb</header>
+<nav
+  class="breadcrumb-container"
+  [class.footer-sidebar-active]="isSidebarVisible"
+>
+<ng-container *ngFor="let breadcrumb of breadcrumbs; let last = last">
+    <a [routerLink]="breadcrumb.url"
+       (click)="navigateTo(breadcrumb.url)"
+       [class.active]="breadcrumb.url === activeRoute">
+      {{ breadcrumb.label }}
+    </a>
+    <span  *ngIf="!last"> </span>
+  </ng-container>
+
+</nav>

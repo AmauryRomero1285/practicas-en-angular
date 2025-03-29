@@ -36,123 +36,123 @@ export class SidebarComponent {
   searchTerm: string = '';
   sidebarItems = [
     {
-      name: 'Ejercicio 1',
+      name: 'Practica 01',
       route: '/page1',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 1',
+        name: 'Objetivo. Poner en practica la actualización de plantillas y estilo de componentes de Angular',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'Los componentes son los elementos básicos para cualquier aplicación Angular. Cada componente esta conformado por tres partes: clase en TypeScript, plantilla HTML y estilos CSS ' },
       },
     },
     {
-      name: 'Ejercicio 2',
+      name: 'Practica 02',
       route: '/page2',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 2',
+        name: 'Objetivo. Poner en practica la actualización de la clase de un componente y uso de la interpolación.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'En Angular, la lógica y el comportamiento del componente se definen en la clase TypeScript del componente.' },
       },
     },
     {
-      name: 'Ejercicio 3',
+      name: 'Practica 03',
       route: '/page3',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 3',
+        name: 'Objetivo. Practica de composición de los componentes.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'La propiedad <selector> de la configuración del componente le proporciona un nombre para usar al hacer referencia al componente en otra plantilla. El <selector> se usa como una etiqueta HTML, por ejemplo, app-user sería <app-user/> en la plantilla.' },
       },
     },
     {
-      name: 'Ejercicio 4',
+      name: 'Practica 04',
       route: '/page4',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 4',
-        Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        name: 'Objetivo. Practica del uso de condicionales en plantillas.',
       },
+      Open: false,
+      submenu: { name: 'En esta actividad se pone en practica el uso del *ngIf para mostrar u ocultar elementos en una plantilla.' },
     },
     {
-      name: 'Ejercicio 5',
+      name: 'Practica 05',
       route: '/page5',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 5 ',
+        name: 'objetivo. Practica del uso de bucles en plantillas.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'En esta actividad se pone en practica el uso del @for para repetir elementos en una plantilla.' },
       },
     },
     {
-      name: 'Ejercicio 6',
+      name: 'Practica 06',
       route: '/page6',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 6',
+        name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'En esta actividad se pone en practica la vinculación de propiedades entre plantillas.' },
       },
     },
     {
-      name: 'Ejercicio 7',
+      name: 'Practica 07',
       route: '/page7',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 7',
+        name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de un controlador de eventos.' },
       },
     },
     {
-      name: 'Ejercicio 8',
+      name: 'Practica 08',
       route: '/page8',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 8',
+        name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de @Input para enviar información entre componentes.' },
       },
     },
     {
-      name: 'Ejercicio 9',
+      name: 'Practica 09',
       route: '/page9',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 9',
+        name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de @Output para recibir información entre componentes.' },
       },
     },
     {
-      name: 'Ejercicio 10',
+      name: 'Practica 10',
       route: '/page10',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 10',
+        name: 'Objetivo.Practica de vistas diferibles en Angular.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: 'En esta actividad se ponen en practica las vistas diferibles para prolongar la carga de una sección en la misma plantilla del componente.' },
       },
     },
     {
-      name: 'Ejercicio 11',
+      name: 'Practica 11',
       route: '/page11',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 11',
+        name: 'Objetivo. Practicar el uso de NgOptimizedImage.',
         Open: false,
-        submenu: { name: 'Descripción del proyecto  ' },
+        submenu: { name: ' En esta actividad se pone en practica el NgOptimizedImage para garantizar que las imagenes se carguen de manera eficiente.' },
       },
     },
     {
-      name: 'Ejercicio 12',
+      name: 'Practica 12',
       route: '/page12',
       isOpen: false,
       menu: {
-        name: 'Ejercicio 12',
+        name: 'Objetivo. Practicar el enrutamiento en Angular.',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: 'En esta actividad se pone en practica la configuración y enrutamiento de Angular Router.' },
       },
     },
     {
@@ -160,9 +160,9 @@ export class SidebarComponent {
       route: '/simple-table',
       isOpen: false,
       menu: {
-        name: 'Tabla dinamica',
+        name: 'Objetivo. Uso de angular-datatables.',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de una datatable basica en Angular mediante la dependencia de angular-datatables.' },
       },
     },
     {
@@ -170,9 +170,9 @@ export class SidebarComponent {
       route: '/dataTable-table',
       isOpen: false,
       menu: {
-        name: 'Tabla dinamica',
+        name: 'Objetivo. Implementar una datatable con opciones.',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de una datatable con opciones mediante la dependencia de angular-datatables.' },
       },
     },
     {
@@ -180,9 +180,11 @@ export class SidebarComponent {
       route: '/json-table',
       isOpen: false,
       menu: {
-        name: 'Tabla JSON',
+        name: 'Objetivo. Importar una tabla de angular-datatables usando datos estaticos de un json',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: ' En esta actividad se pone en practica el uso de una datatable que muestra los datos estaticos de un json.'
+
+ },
       },
     },
     {
@@ -190,9 +192,9 @@ export class SidebarComponent {
       route: '/api-table',
       isOpen: false,
       menu: {
-        name: 'Tabla API',
+        name: 'Objetivo. Importar una tabla de angular-datatables usando datos de una API',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de una datatable que muestra los datos dinamicos consumidos por una API.' },
       },
     },
     {
@@ -200,9 +202,9 @@ export class SidebarComponent {
       route: '/basic-graph',
       isOpen: false,
       menu: {
-        name: 'Gráficas',
+        name: 'Objetivo. Importar una grafica de amcharts usando datos estaticos',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: ' En esta actividad se pone en practica el uso de una grafica con datos estaticos.'  },
       },
     },
     {
@@ -210,9 +212,9 @@ export class SidebarComponent {
       route: '/assigned-graph',
       isOpen: false,
       menu: {
-        name: 'Gráficas',
+        name: 'Objetivo. Importar una grafica de amcharts usando datos estaticos asignada por el docente',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de una grafica asignada por el docente.' },
       },
     },
     {
@@ -220,9 +222,9 @@ export class SidebarComponent {
       route: '/api-graph',
       isOpen: false,
       menu: {
-        name: 'Gráficas',
+        name: 'Objetivo. Importar una grafica de amcharts usando datos de una API',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de una grafica que muestra los datos dinamicos consumidos de una API' },
       },
     },
     {
@@ -230,9 +232,9 @@ export class SidebarComponent {
       route: '/json-graph',
       isOpen: false,
       menu: {
-        name: 'Gráficas',
+        name: 'Objetivo. Importar una grafica de amcharts usando datos estaticos de un json',
         Open: false,
-        submenu: { name: 'El sidebar es un ejemplo del RouterOulet' },
+        submenu: { name: 'En esta actividad se pone en practica el uso de una grafica con datos estaticos de un json' },
       },
     },
   ];
