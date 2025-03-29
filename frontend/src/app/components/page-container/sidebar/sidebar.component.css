@@ -2,10 +2,13 @@
 .sidebar {
   background-color: #343E3D;
   color: white;
+  max-height: 94vh;
   height: 94vh;
   width: 25vw;
   padding: 1rem;
   transition: all 0.3s ease-in-out;
+  overflow-y: scroll;
+  scrollbar-color: #00000001 #343E3D;
 }
 
 /* Título del sidebar */
@@ -46,6 +49,8 @@
   border-radius: 10px;
   border: none;
   width: 90%;
+  position: sticky;
+  top: 0;
 }
 
 .submenu {
@@ -55,6 +60,7 @@
   border-radius: 10px;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .submenu-item {
@@ -64,23 +70,27 @@
   text-decoration: none;
   font-size: 0.9rem;
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .submenu-item:hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Animación para el submenú */
 .submenu-enter {
   max-height: 0;
   opacity: 0;
+  cursor: pointer;
 }
 
 .submenu-enter-active {
   max-height: 200px;
   opacity: 1;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .submenu-exit {

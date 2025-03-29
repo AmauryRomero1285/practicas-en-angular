@@ -18,11 +18,11 @@ export class SidebarComponent {
 
   ngOnInit(): void {
     this.currentRoute = this.router.url;
-  
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
-  
+
         // Asegurar que el item correspondiente esté abierto
         this.sidebarItems.forEach((item) => {
           item.isOpen = item.route === this.currentRoute;
@@ -31,7 +31,7 @@ export class SidebarComponent {
       }
     });
   }
-  
+
   //
   searchTerm: string = '';
   sidebarItems = [
@@ -42,7 +42,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Poner en practica la actualización de plantillas y estilo de componentes de Angular',
         Open: false,
-        submenu: { name: 'Los componentes son los elementos básicos para cualquier aplicación Angular. Cada componente esta conformado por tres partes: clase en TypeScript, plantilla HTML y estilos CSS ' },
+        submenu: {
+          name: 'Los componentes son los elementos básicos para cualquier aplicación Angular. Cada componente esta conformado por tres partes: clase en TypeScript, plantilla HTML y estilos CSS ',
+        },
       },
     },
     {
@@ -52,7 +54,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Poner en practica la actualización de la clase de un componente y uso de la interpolación.',
         Open: false,
-        submenu: { name: 'En Angular, la lógica y el comportamiento del componente se definen en la clase TypeScript del componente.' },
+        submenu: {
+          name: 'En Angular, la lógica y el comportamiento del componente se definen en la clase TypeScript del componente.',
+        },
       },
     },
     {
@@ -62,7 +66,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Practica de composición de los componentes.',
         Open: false,
-        submenu: { name: 'La propiedad <selector> de la configuración del componente le proporciona un nombre para usar al hacer referencia al componente en otra plantilla. El <selector> se usa como una etiqueta HTML, por ejemplo, app-user sería <app-user/> en la plantilla.' },
+        submenu: {
+          name: 'La propiedad <selector> de la configuración del componente le proporciona un nombre para usar al hacer referencia al componente en otra plantilla. El <selector> se usa como una etiqueta HTML, por ejemplo, app-user sería <app-user/> en la plantilla.',
+        },
       },
     },
     {
@@ -71,9 +77,11 @@ export class SidebarComponent {
       isOpen: false,
       menu: {
         name: 'Objetivo. Practica del uso de condicionales en plantillas.',
+        Open: false,
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso del *ngIf para mostrar u ocultar elementos en una plantilla.',
+        },
       },
-      Open: false,
-      submenu: { name: 'En esta actividad se pone en practica el uso del *ngIf para mostrar u ocultar elementos en una plantilla.' },
     },
     {
       name: 'Practica 05',
@@ -82,7 +90,9 @@ export class SidebarComponent {
       menu: {
         name: 'objetivo. Practica del uso de bucles en plantillas.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso del @for para repetir elementos en una plantilla.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso del @for para repetir elementos en una plantilla.',
+        },
       },
     },
     {
@@ -92,7 +102,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica la vinculación de propiedades entre plantillas.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica la vinculación de propiedades entre plantillas.',
+        },
       },
     },
     {
@@ -102,7 +114,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de un controlador de eventos.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de un controlador de eventos.',
+        },
       },
     },
     {
@@ -112,7 +126,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de @Input para enviar información entre componentes.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de @Input para enviar información entre componentes.',
+        },
       },
     },
     {
@@ -122,7 +138,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Practica del uso de eventos en plantillas.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de @Output para recibir información entre componentes.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de @Output para recibir información entre componentes.',
+        },
       },
     },
     {
@@ -132,7 +150,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo.Practica de vistas diferibles en Angular.',
         Open: false,
-        submenu: { name: 'En esta actividad se ponen en practica las vistas diferibles para prolongar la carga de una sección en la misma plantilla del componente.' },
+        submenu: {
+          name: 'En esta actividad se ponen en practica las vistas diferibles para prolongar la carga de una sección en la misma plantilla del componente.',
+        },
       },
     },
     {
@@ -142,7 +162,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Practicar el uso de NgOptimizedImage.',
         Open: false,
-        submenu: { name: ' En esta actividad se pone en practica el NgOptimizedImage para garantizar que las imagenes se carguen de manera eficiente.' },
+        submenu: {
+          name: ' En esta actividad se pone en practica el NgOptimizedImage para garantizar que las imagenes se carguen de manera eficiente.',
+        },
       },
     },
     {
@@ -152,7 +174,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Practicar el enrutamiento en Angular.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica la configuración y enrutamiento de Angular Router.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica la configuración y enrutamiento de Angular Router.',
+        },
       },
     },
     {
@@ -162,7 +186,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Uso de angular-datatables.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de una datatable basica en Angular mediante la dependencia de angular-datatables.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de una datatable basica en Angular mediante la dependencia de angular-datatables.',
+        },
       },
     },
     {
@@ -172,7 +198,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Implementar una datatable con opciones.',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de una datatable con opciones mediante la dependencia de angular-datatables.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de una datatable con opciones mediante la dependencia de angular-datatables.',
+        },
       },
     },
     {
@@ -182,9 +210,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Importar una tabla de angular-datatables usando datos estaticos de un json',
         Open: false,
-        submenu: { name: ' En esta actividad se pone en practica el uso de una datatable que muestra los datos estaticos de un json.'
-
- },
+        submenu: {
+          name: ' En esta actividad se pone en practica el uso de una datatable que muestra los datos estaticos de un json.',
+        },
       },
     },
     {
@@ -194,7 +222,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Importar una tabla de angular-datatables usando datos de una API',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de una datatable que muestra los datos dinamicos consumidos por una API.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de una datatable que muestra los datos dinamicos consumidos por una API.',
+        },
       },
     },
     {
@@ -204,7 +234,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Importar una grafica de amcharts usando datos estaticos',
         Open: false,
-        submenu: { name: ' En esta actividad se pone en practica el uso de una grafica con datos estaticos.'  },
+        submenu: {
+          name: ' En esta actividad se pone en practica el uso de una grafica con datos estaticos.',
+        },
       },
     },
     {
@@ -214,7 +246,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Importar una grafica de amcharts usando datos estaticos asignada por el docente',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de una grafica asignada por el docente.' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de una grafica asignada por el docente.',
+        },
       },
     },
     {
@@ -224,7 +258,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Importar una grafica de amcharts usando datos de una API',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de una grafica que muestra los datos dinamicos consumidos de una API' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de una grafica que muestra los datos dinamicos consumidos de una API',
+        },
       },
     },
     {
@@ -234,7 +270,9 @@ export class SidebarComponent {
       menu: {
         name: 'Objetivo. Importar una grafica de amcharts usando datos estaticos de un json',
         Open: false,
-        submenu: { name: 'En esta actividad se pone en practica el uso de una grafica con datos estaticos de un json' },
+        submenu: {
+          name: 'En esta actividad se pone en practica el uso de una grafica con datos estaticos de un json',
+        },
       },
     },
   ];
@@ -242,14 +280,16 @@ export class SidebarComponent {
   //
   get displayedItems() {
     if (!this.searchTerm.trim()) {
-      return this.sidebarItems.filter(item => item.route === this.currentRoute);
+      return this.sidebarItems.filter(
+        (item) => item.route === this.currentRoute
+      );
     }
-    return this.sidebarItems.filter(item => 
-      item.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      item.menu.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    return this.sidebarItems.filter(
+      (item) =>
+        item.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        item.menu.name.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
-  
 
   // Función para abrir/cerrar el primer nivel de submenú
   toggleDropdown(index: number) {
@@ -259,24 +299,21 @@ export class SidebarComponent {
         item.menu.Open = item.isOpen;
       } else {
         item.isOpen = false;
-        item.menu.Open = false; 
+        item.menu.Open = false;
       }
     });
   }
-  
-  
 
   // Función para abrir/cerrar el submenú
   toggleSubmenu(index: number): void {
     const item = this.sidebarItems[index];
-  
+
     // Alternar solo el submenú sin afectar otros
     item.menu.Open = !item.menu.Open;
-  
+
     if (item.menu.Open) {
       item.isOpen = true;
     }
   }
-  
   
 }
