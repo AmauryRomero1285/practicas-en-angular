@@ -315,5 +315,4 @@ export class SidebarComponent {
       item.isOpen = true;
     }
   }
-  
 }
